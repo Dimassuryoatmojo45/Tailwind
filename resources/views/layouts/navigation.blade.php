@@ -44,7 +44,7 @@
                 <ul class="mb-6 flex flex-col gap-4">
                     <!-- Menu Item Dashboard -->
                     @php
-                    $isDashboardActive = request()->is('dashboard*');
+                    $isDashboardActive = request()->is('dashboard*') || request()->is('report_produksi*');
                     $isModalActive = request()->is('modal*') || request()->is('datatable*');
                     @endphp
 
@@ -83,6 +83,12 @@
                                     <a href="{{ route('dashboard') }}"
                                         class="menu-dropdown-item group {{ request()->is('dashboard') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive' }}">
                                         Report Harian
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('report_produksi') }}"
+                                        class="menu-dropdown-item group {{ request()->is('report_produksi') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive' }}">
+                                        Report Produksi
                                     </a>
                                 </li>
                             </ul>

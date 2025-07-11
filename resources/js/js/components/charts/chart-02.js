@@ -8,7 +8,7 @@ const chart02 = () => {
     chart: {
       fontFamily: "Outfit, sans-serif",
       type: "radialBar",
-      height: 330,
+      height: 260,
       sparkline: {
         enabled: true,
       },
