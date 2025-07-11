@@ -67,4 +67,9 @@ class ProfileController extends Controller
     {
         return view('datatable');
     }
+
+    public function report_produksi(Request $request)
+    {
+        return view('report_produksi');
+    }
 }

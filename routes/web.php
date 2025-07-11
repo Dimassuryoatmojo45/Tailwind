@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/modal', [ProfileController::class, 'modal'])->name('modal');
     Route::get('/datatable', [ProfileController::class, 'datatable'])->name('datatable');
+    Route::get('/report_produksi', [ProfileController::class, 'report_produksi'])->name('report_produksi');
 });
 
 require __DIR__.'/auth.php';
