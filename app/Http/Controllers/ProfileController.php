@@ -72,4 +72,14 @@ class ProfileController extends Controller
     {
         return view('report_produksi');
     }
+
+    public function produksi(Request $request)
+    {
+        return view('produksi');
+    }
+
+    public function input_po(Request $request)
+    {
+        return view('input_po');
+    }
 }
