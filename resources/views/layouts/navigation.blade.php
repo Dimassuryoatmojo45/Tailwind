@@ -9,8 +9,10 @@
         ]">
         <a href="index.html">
             <span class="logo" :class="{ 'hidden': sidebarToggle }">
-                <img class="dark:hidden" src="./images/logo/logo.svg" alt="Logo" />
-                <img class="hidden dark:block" src="./images/logo/logo-dark.svg" alt="Logo" />
+                <!-- <img class="dark:hidden" src="./images/logo/logo.svg" alt="Logo" />
+                <img class="hidden dark:block" src="./images/logo/logo-dark.svg" alt="Logo" /> -->
+                <h1 class="font-bold">UNION</h1>
+                <h1 class="font-bold hidden dark:block text-gray-25">UNION</h1>
             </span>
 
             <img class="logo-icon" :class="{ 'lg:block': sidebarToggle, 'hidden': !sidebarToggle }"
@@ -44,7 +46,8 @@
                 <ul class="mb-6 flex flex-col gap-4">
                     <!-- Menu Item Dashboard -->
                     @php
-                    $isDashboardActive = request()->is('dashboard*') || request()->is('report_produksi*');
+                    $isDashboardActive = request()->is('dashboard*') || request()->is('report_produksi*') ||
+                    request()->is('produksi*') || request()->is('input_po*');
                     $isModalActive = request()->is('modal*') || request()->is('datatable*');
                     @endphp
 
@@ -86,9 +89,21 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="{{ route('input_po') }}"
+                                        class="menu-dropdown-item group {{ request()->is('input_po') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive' }}">
+                                        Input PO
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ route('report_produksi') }}"
                                         class="menu-dropdown-item group {{ request()->is('report_produksi') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive' }}">
                                         Report Produksi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('produksi') }}"
+                                        class="menu-dropdown-item group {{ request()->is('produksi') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive' }}">
+                                        Kerja Produksi
                                     </a>
                                 </li>
                             </ul>

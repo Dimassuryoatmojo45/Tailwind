@@ -20,7 +20,7 @@
                             <!-- Search -->
                             <div class="mb-4">
                                 <input x-model="search" type="text" placeholder="Cari nama..."
-                                    class="w-full px-4 py-2 border rounded-md dark:bg-gray-800 dark:text-[#ffff] dark:border-gray-600" />
+                                    class="w-30 px-4 py-2 border rounded-md dark:bg-gray-800 dark:text-[#ffff] dark:border-gray-600" />
                             </div>
                             <div class="flex gap-2 mb-4">
                                 <button @click="exportCSV()"
@@ -123,7 +123,7 @@
                                         class="px-2 py-1 rounded border dark:border-gray-700">&larr;</button>
                                     <template x-for="i in totalPages()">
                                         <button @click="page = i"
-                                            :class="page === i ? 'bg-blue-500 text-white' : 'bg-gray-100 dark:bg-gray-700'"
+                                            :class="page === i ? 'bg-blue-500 text-gray-25' : 'bg-gray-100 dark:bg-gray-700'"
                                             class="px-2 py-1 rounded border dark:border-gray-700" x-text="i"></button>
                                     </template>
                                     <button @click="nextPage" :disabled="page === totalPages()"
@@ -150,15 +150,15 @@ function dataTable() {
                 id: 1,
                 no: 1,
                 artikel: 'Jersey Printing',
-                pengadaan_bahan: '✓',
-                setting_bahan: '✓',
-                afdruk: '✓',
-                profing: '✓',
-                produksi_kain: '✓',
-                sablon: '✓',
-                finishing_jahit: '✓',
-                packing: '✓',
-                selesai: '✓',
+                pengadaan_bahan: '2025-07-05',
+                setting_bahan: '2025-07-05',
+                afdruk: '2025-07-05',
+                profing: '2025-07-05',
+                produksi_kain: '2025-07-05',
+                sablon: '2025-07-05',
+                finishing_jahit: '2025-07-05',
+                packing: '2025-07-05',
+                selesai: '2025-07-05',
                 tgl_input_po: '2025-07-07',
                 tgl_deadline: '2025-07-14'
             },
@@ -166,7 +166,7 @@ function dataTable() {
                 id: 2,
                 no: 2,
                 artikel: 'Kaos Polos',
-                pengadaan_bahan: '✓',
+                pengadaan_bahan: '2025-07-04',
                 setting_bahan: '',
                 afdruk: '',
                 profing: '',
